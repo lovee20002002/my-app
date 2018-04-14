@@ -15,12 +15,14 @@ import { AddAccountComponent } from './add-account/add-account.component';
 import { AccountsService } from './accounts.service';
 import { LoggingService } from './logging.service';
 import { Routes, RouterModule } from '@angular/router';
+import { UserComponent } from './user/user.component';
 
 
 const routes: Routes = [
   { path:'',component:HomeComponent},
-  { path:'users',component:StarComponent},
-  { path:'',component:AddAccountComponent}
+  { path:'star',component:StarComponent},
+  { path:'addaccunt',component:AddAccountComponent},
+  { path:'user/:id/:name',component:UserComponent}
 ];
 
 
@@ -35,7 +37,8 @@ const routes: Routes = [
     TrueComponent,
     UnleesDirective,
     ServiceComponent,
-    AddAccountComponent
+    AddAccountComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routes)

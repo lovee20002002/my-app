@@ -19,7 +19,6 @@ export class AddAccountComponent implements OnInit {
   }
   addNewAccount() {
     let a:IAccount = {name: this.username.nativeElement.value , pasword: this.password.nativeElement.value};
-    this.accountservice.addAccount(a);
-  }
+   }
 
 }
