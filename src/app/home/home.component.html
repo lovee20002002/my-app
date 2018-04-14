@@ -1,0 +1,25 @@
+<div>
+  <label for="comment">Comment:</label>
+  <textarea #commenttext name="comment" class="form-control" cols="30" rows="10">sadasd</textarea>
+  <button (click)="addcomment()" type="button" class="btn btn-primary|secondary|success|danger|warning|info|light|dark|link">Add Coment</button>
+</div>
+<div *ngIf="comments != null">
+  <div *ngFor="let c of comments">
+    <p>{{c.comment}}</p>
+    <div>
+      <app-star [rating]="c.numberOfReviwe != 0 ? c.star / c.numberOfReviwe : 0"></app-star>
+    </div>
+    <div>
+      <span>{{c.like}}</span>
+      <li (click)="commentlike(c)" class="oi oi-thumb-up"></li>
+      <span>{{c.dislike}}</span>
+      <li (click)="commentdislike(c)" class="oi oi-thumb-down"></li>
+    </div>
+    <div>
+      <span>Rating: </span>
+      <input #ratinginput type="number" (keyup.enter)="reviwescont(c ,ratinginput )" min="0" max="5">
+    </div>
+    <hr/>
+    <br/>
+  </div>
+</div>

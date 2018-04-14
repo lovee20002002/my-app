@@ -1,0 +1,19 @@
+<span>Name: </span><input #username type="text" class="form-control" >
+<span>Password: </span><input #password type="password" class="form-control">
+<button (click)="addNewAccount()" class="btn btn-success">Submit</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of account">
+      <td>{{a.name}}</td>
+      <td>{{a.pasword}}</td>
+    </tr>
+    
+  </tbody>
+</table>

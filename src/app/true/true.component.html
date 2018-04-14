@@ -1,0 +1,26 @@
+<button (click)="makeDisapper()" type="button" class="btn btn-success">hideen</button>
+<!-- <div *ngIf="absent">
+  <ol>
+     <li *ngFor="let s of name">{{s}}</li>
+  </ol>
+
+</div> -->
+<p>{{absent}}</p>
+<div *appUnlees="absent">
+    <ol>
+        <li *ngFor="let s of name">{{s}}</li>
+     </ol>
+</div>
+
+
+<span [ngSwitch]="score">
+<p *ngSwitchCase="100">
+is 100
+</p>
+<p *ngSwitchCase="70">
+si 70
+</p>
+<p *ngSwitchDefault>
+is defulat
+</p>
+</span>
