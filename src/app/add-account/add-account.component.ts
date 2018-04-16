@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AccountsService } from '../accounts.service';
 import { IAccount } from '../account';
-import { emit } from 'cluster';
+// import { emit } from 'cluster';
 
 @Component({
   selector: 'app-add-account',
@@ -19,6 +19,7 @@ export class AddAccountComponent implements OnInit {
   }
   addNewAccount() {
     let a:IAccount = {name: this.username.nativeElement.value , pasword: this.password.nativeElement.value};
+    
    }
 
 }

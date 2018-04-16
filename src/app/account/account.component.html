@@ -1,0 +1,15 @@
+<table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse table-responsive">
+  <thead class="thead-inverse|thead-default">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+      </tr>
+    </tbody>
+</table>
+<button (click)="onClick(1)" type="button" class="btn btn-warning">Edite</button>
